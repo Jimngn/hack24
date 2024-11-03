@@ -31,6 +31,12 @@ def add_score():
     conn.close()
     return jsonify({"message": "Score added successfully"}), 201
 
+conn = sqlite3.connect('leaderboard.db')
+conn.execute('CREATE TABLE IF NOT EXISTS leaderboard (id INTEGER PRIMARY KEY, name TEXT, score INTEGER)')
+conn.close()
+
+
 if __name__ == "__main__":
     init_db()
     app.run(debug=True)
+

@@ -5,6 +5,9 @@ import level1  # Import level1 module
 import level2  # Import level2 module
 import level3  # Import level3 module
 import level4  # Import level4 module
+from flask import Flask
+app = Flask(__name__)
+
 
 def show_landing_page():
     # Initialize Pygame
